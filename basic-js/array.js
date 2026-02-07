@@ -28,7 +28,7 @@
 // console.log(filterPrice);
 
 // //filtered out all of the minor in the club 
-// let personName = ["sherwin", "Tablang", "Alex", , "", "Yamzon", "Errol"]
+// let personName = ["sherwin", "Tablang", , "", "Yamzon", "Errol"]
 // let age = [23, 20, 20, 21, 12, 10, 24, 21]
 
 // let clubFilter = age.filter((element => {
