@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const Product1 = {
+            name: 'Shoes',
+            price: 100,
+            'description-one': 'This is a pair of shoes.',
+            brand: {
+                name: 'Nike',
+                model: 'Air Max'
+            },
+            availability: function MeronPaba() {
+                console.log('Meron pa ata');
+            }
+        };
+        console.log(Product1);
+        console.log(Product1.name);
+        console.log(Product1.price);
+        console.log(Product1['description-one']);
+        console.log(Product1.brand);
+        
+        console.log(JSON.stringify(Product1))
+
+
+    </script>
+
+</body>
+
+</html>

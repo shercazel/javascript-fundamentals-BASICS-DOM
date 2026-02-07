@@ -1,0 +1,75 @@
+#hero-section {
+    padding: 0.5rem;
+    position: relative;
+}
+
+.hero-section-container {
+    width: 100%;
+    padding: 2.5rem;
+}
+
+.hero-content {
+    margin-left: 7rem;
+    padding: 0rem;
+    font-size: 2rem;
+    height: 60%;
+    width: 100%;
+    min-width: 400px;
+    max-height: 100%;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-section-container:nth-child(1) {
+    width: 140%;
+}
+
+.hero-paragraph-one {
+    position: relative;
+    top: 3%;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    color: var(--tertiary-color);
+}
+
+.hero-paragraph-one::first-letter {
+    font-size: 30px;
+    color: var(--secondary-color);
+}
+
+.hero-paragraph-two {
+    font-size: 16px;
+    font-family: var(--font-family);
+    color: var(--tertiary-color);
+
+}
+
+.hero-button {
+    width: 15rem;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.hero-span-btn {
+    font-weight: bold;
+}
+
+.hero-paragraph-one {
+    font-size: 1rem;
+}
+
+.hero-span {
+    color: var(--secondary-color);
+}
+
+.hero-section-logo {
+    position: relative;
+    top: 50px;
+    right: 25px;
+
+}

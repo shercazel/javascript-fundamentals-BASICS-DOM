@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove an spell</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        div {
+            min-width: 50%;
+            height: 100vh;
+            background-color: rgb(39, 72, 101);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 5rem
+        }
+        ul{
+            height: 50%;
+            width: 50%;
+            border: 1px solid black;
+            display: flex;
+            font-size: 2rem;
+            flex-direction: column;
+            padding: 2%;
+
+
+        }
+        button{
+            margin-left: 60%;
+            height: 100%;
+            width: 100px;
+            border: none;
+            border-radius: 20px;
+            background-color: rgb(0, 98, 150);
+            transition: all 0.3s ease-in-out ;
+        }
+        button:hover{
+            background-color: aqua;
+        }
+        #list-container{
+            display: flex;
+            width: 100%;
+            height: auto;
+            height: auto;
+            padding: 1% 0% ;
+            margin: 1% 0%;
+            border-bottom: 2px solid greenyellow;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mai-class">
+        <ul id="listOfSpell">
+        </ul>
+    </div>
+
+    <script>
+        let divSpellContainer = document.querySelector('div');
+        divSpellContainer.classList += 'spell-Container';
+        console.log(divSpellContainer.getAttribute('id'));
+
+        const heading = document.createElement('h1');
+        heading.className = 'h1-heading';
+        console.log(heading.getAttribute('class'));
+        divSpellContainer.insertAdjacentHTML('afterbegin','Remove the spell');
+
+        const spell = document.getElementById('listOfSpell');
+        console.log(spell.getAttribute('id'))
+
+
+        function spellFunction(spellName){
+
+           const spellList = document.createElement('li');
+            spellList.id = 'list-container';
+            spellList.textContent = spellName;
+            spell.append(spellList);
+
+            const btn = document.createElement('button');
+            btn.textContent = 'remove';
+            btn.addEventListener('click',removeSpell)
+            spellList.append(btn);
+
+            // function
+
+            function removeSpell(){
+                spellList.remove();
+            }
+
+
+
+        }
+
+        spellFunction('Waters');
+        spellFunction('waterbender');
+        spellFunction('FireCrackers');
+        spellFunction('FireCrackers');
+        spellFunction('Fire');
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

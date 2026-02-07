@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Manipulation</title>
+</head>
+
+<body>
+    <button class="js-button">Hellow world</button>
+    <button class="js-button-2">Hellow world ulit</button>
+    <script>
+        console.log(document.querySelector('button'
+        ).innerHTML)
+        document.querySelector('button').innerHTML = 'Change';
+        const buttonElemet = document.querySelector('.js-button');
+        document.querySelector('.js-button-2').innerHTML = '()';
+        console.log(buttonElemet)
+
+        /*
+        document.title = "Change mo nga";
+        console.log(document.title);
+        document.body.innerHTML = '<button> Yeah Boy! </button>'
+
+        // document.body.innerHTML = 'hello';
+        // document.title = 'baguhin natin title';
+        */
+    </script>
+</body>
+
+</html>

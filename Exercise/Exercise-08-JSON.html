@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let colorArray = ['yellow', 'blue', 'green']
+        let numnberArray = [1, 2, 2, 3]
+
+
+
+        let colorFav = {
+            sher: 'yellow',
+            win: 'blue',
+            errol: 'green',
+            rodelas: 'red'
+        }
+
+        const hesas = localStorage.setItem('Fav', JSON.stringify(colorFav));
+        console.log(localStorage.getItem('Fav'));
+
+        const saveData = JSON.parse(localStorage.getItem('Fav'));
+        console.log(saveData)
+
+
+
+        localStorage.setItem('color', colorArray)
+        console.log(localStorage.getItem('color'))
+
+
+
+
+    </script>
+
+</body>
+
+</html>

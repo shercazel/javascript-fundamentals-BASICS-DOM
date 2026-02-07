@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Corner</title>
+<style>
+  /* General body settings */
+  body {
+    margin: 0;
+    overflow: hidden; /* important para walang scrollbar habang nag-slide */
+    font-family: Arial, sans-serif;
+  }
+
+  /* Sections style */
+  section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 100%; /* start outside the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.7s ease;
+  }
+
+  /* Landing page first */
+  #landing {
+    left: 0; /* visible first */
+    background: url('picture/106815.webp') center/cover no-repeat;
+    color: rgb(104, 54, 1);
+    font-size: 40px;
+  }
+
+  /* Login page */
+  #login {
+    background-color: #5c2a0c;
+    color: white;
+  }
+
+  /* Button styles */
+  button {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(230, 145, 0);
+    color: rgb(79, 45, 0);
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s;
+  }
+
+  button:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Input fields */
+  input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  /* Message */
+  #message {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  /* Coffee steam animation */
+  #landing h1::after {
+    content: "☁";
+    display: block;
+    font-size: 50px;
+    animation: steam 2s infinite;
+    margin-top: 10px;
+  }
+
+  @keyframes steam {
+    0% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(-40px); opacity: 0; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Landing page -->
+<section id="landing">
+  <h1>COFFEE CORNER</h1>
+  <button id="getStarted">Get Ready</button>
+</section>
+
+<!-- Login page -->
+<section id="login">
+  <h2>LOGIN</h2>
+  <input type="text" placeholder="Username" id="username">
+  <input type="password" placeholder="Password" id="password">
+  <button onclick="login()">Login</button>
+  <p id="message"></p>
+</section>
+
+<script>
+const landing = document.getElementById("landing");
+const login = document.getElementById("login");
+const getStartedBtn = document.getElementById("getStarted");
+
+// Function to slide pages
+function slideToLogin() {
+  landing.style.left = "-100%"; // slide landing out
+  login.style.left = "0";       // slide login in
+}
+
+// Slide automatically after 2.5 seconds
+setTimeout(slideToLogin, 2500);
+
+// Also allow button click
+getStartedBtn.addEventListener("click", slideToLogin);
+
+// Simple login validation
+function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  const message = document.getElementById("message");
+
+  if(username === "admin" && password === "1234"){
+    message.style.color = "lightgreen";
+    message.textContent = "Login Successful! 🎉";
+  } else {
+    message.style.color = "red";
+    message.textContent = "Invalid username or password ❌";
+  }
+}
+</script>
+
+</body>
+</html>

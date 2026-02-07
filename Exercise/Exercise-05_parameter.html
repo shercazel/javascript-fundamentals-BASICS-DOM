@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="playGame('Rock'); ">Rock</button>
+    <button onclick="playGame('Paper')">Paper</button>
+    <button onclick="playGame('Scissors');">Scissors</button>
+    <script>
+        function playGame(playerMove) {
+            let result = '';
+            const computerPick = pickComputer();
+            if (playerMove === 'Rock') {
+                if (computerPick === 'Rock') {
+                    result = 'Its a tie';
+                } else if (computerPick === 'Paper') {
+                    result = 'You lose';
+                } else if (computerPick === 'Scissors') {
+                    result = 'You win';
+                }
+            } else if (playerMove === 'Paper') {
+                if (computerPick === 'Rock') {
+                    result = 'You win';
+                } else if (computerPick === 'Paper') {
+                    result = 'its a tie';
+                }
+                else if (computerPick === 'Scissors') {
+                    result = 'You lose';
+                }
+            } else if (playerMove === 'Sccisors') {
+                if (computerPick === 'Rock') {
+                    result = 'Its a tie';
+                } else if (computerPick === 'Paper') {
+                    result = 'You lose';
+                } else if (computerPick === 'Scissors') {
+                    result = 'You win';
+                }
+            }
+            return alert(`You pick ${playerMove} the Computer pick ${computerPick} the result is ${result}`);
+        }
+        function pickComputer() {
+            let computerPick = '';
+            const randomPick = Math.random();
+            if (randomPick >= 0 && randomPick < 1 / 3) {
+                computerPick = 'Rock';
+            } else if (randomPick >= 1 / 3 && randomPick < 2 / 3) {
+                computerPick = 'Paper'
+            } else if (randomPick >= 2 / 3 && randomPick < 1) {
+                computerPick = 'Scissors'
+            }
+            return computerPick;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accepting Javascript user input</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        #main-container {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(172, 104, 16);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 5%;
+            position: relative;
+        }
+
+        #username {
+            height: 40px;
+            width: 80%;
+            background-color: green;
+            font-weight: 500;
+            color: white;
+            border: 1px white solid;
+            padding-left: 0%;
+
+        }
+
+        #username::placeholder {
+            color: rgb(255, 255, 255);
+            padding-left: 2%;
+        }
+
+        #btn {
+            position: absolute;
+            height: 40px;
+            width: 120px;
+            top: 15%;
+            left: 76%;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(173, 173, 39);
+            color: white;
+        }
+
+        p {
+            position: absolute;
+            top: 50%;
+            font-size: 40px;
+        }
+
+        .login {
+            height: 60%;
+            width: 50%;
+            background-color: rgb(1, 1, 55);
+            border: 1px solid rgba(2, 11, 135, 0.566);
+            box-shadow: inset 0 0 50px 10px rgba(43, 105, 228, 0.611);
+            border-radius: 10px;
+            position: relative;
+
+        }
+
+        .login-credentials {
+            position: absolute;
+            top: 290px;
+            left: 200px;
+        }
+
+        #studentname,
+        #password {
+            height: 40px;
+            width: 300px;
+        }
+
+        .text-area {
+            height: 150px;
+            text-align: left;
+            width: 100%;
+            color: white;
+        }
+
+        h3 {
+            padding: 10% 0% 0% 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-container">
+        <h1></h1>
+        <div class="form">
+            <input type="text" name="user" id="username" placeholder="username">
+            <br>
+            <input type="button" id="btn" value="submit">
+            <br>
+            <br>
+            <ul>
+                <li>add list</li>
+            </ul>
+        </div>
+    </div>
+    <section
+        style="width: 100vw; height: 100vh; background-color: rgb(1, 18, 31); display: flex; justify-content: center; align-items: center;">
+        <div class="login">
+            <div class="text-area">
+                <h3>username: <span id="span1"></span></h3>
+                <h3>password: <span id="span2"></span></h3>
+
+            </div>
+            <div class="login-credentials">
+
+                <input type="text" placeholder="username" id="studentname">
+                <br>
+                <input type="password" placeholder="password" id="password">
+                <br>
+                <input type="button" id="loginbtn" value="login">
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <script>
+        let username;
+
+        // easy way
+        // let uername;
+        // username = window.prompt('what is your username');
+        // console.log('your name is ' + username);
+
+        const div = document.getElementById('main-container');
+        div.style.backgroundColor = 'yellow';
+
+        const h1 = document.querySelector('h1');
+        h1.innerText = 'Welcome to the ROOM';
+        h1.style.color = 'white';
+        h1.style.position = 'absolute';
+        h1.style.top = '80px';
+        h1.style.fontSize = '40px';
+        h1.style.color = 'black';
+
+
+        const form = document.querySelector('.form');
+        form.style.height = '70%';
+        form.style.width = '60%';
+        form.style.backgroundColor = 'none';
+        form.style.borderRadius = '10px';
+        form.style.border = 'solid 1px green';
+        form.style.boxShadow = '-10px 10px 0px 0px green';
+        form.style.display = 'flex';
+        form.style.justifyContent = 'baseline';
+        form.style.flexDirection = 'column';
+        form.style.padding = '5%';
+        form.style.position = 'relative';
+
+        document.getElementById('btn').onclick = () => {
+            username = document.getElementById('username').value;
+            document.querySelector('p').innerText = username;
+            console.log(username);
+        }
+
+        let login_username;
+        let password;
+        let loginbtn = document.getElementById('loginbtn');
+        let span1 = document.getElementById('span1');
+        let span2 = document.getElementById('span2');
+
+
+        loginbtn.addEventListener('click', () => {
+            login_username = document.getElementById('studentname').value;
+            password = document.getElementById('password').value;
+            span1.innerText = login_username;
+            span2.innerText = password;
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

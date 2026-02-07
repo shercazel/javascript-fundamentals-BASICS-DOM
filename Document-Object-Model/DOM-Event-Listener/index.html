@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload='initialPage()'>
+
+    <div>
+
+        <h1>
+            hello world
+        </h1>
+        <button>CLICK ME</button>
+        <button id="akodin">ako din</button>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis at qui eius id tenetur illo
+            reiciendis,
+            deserunt aut beatae, adipisci quis dolore? Est amet incidunt aliquid pariatur deleniti atque officia.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, id repellendus assumenda numquam
+            consequatur
+            voluptate commodi blanditiis eveniet! Illo sunt, minima in mollitia dignissimos ullam facilis. Fuga
+            perspiciatis
+            minima voluptate.
+        </p>
+        <button type="button" class="delete">remove</button>
+        <button type="button" class="add">ADD</button>
+    </div>
+
+
+
+    <!-- onload = Triggers when the web-page has loaded
+ ahalaga ang onload para siguraduhin na lahat ng element at resources ay ready bago patakbuhin ang code, para maiwasan ang errors at masiguro na maayos ang behavior ng page.
+
+ onclick = triggers when an element is clicked
+ onmouseover = Triggers when an element is hover
+ onmouseout = triggers when an element is unhovered
+ onfocus gained focus
+ onblur element has lost focus
+ oninput input is detected
+ onchange input value ha changed -->
+
+    <!-- function
+  Anonymous functions → short, one-off, no reuse needed.
+  Named functions → reusable, easier to debug, and clearer in stack traces.
+ -->
+
+    <script>
+        
+        const div = document.querySelector('div');
+        const hi = document.querySelector('h1');
+        const btn1 = document.querySelector('button');
+        const btn2 = document.getElementById('akodin');
+        const btn3 = document.querySelector('.delete');
+        const addbtn = document.querySelector('.add');
+        const paragraph = document.querySelector('p');
+        const newParagraph = document.createElement('p');
+
+
+
+        function deleteParag() {
+            paragraph.remove();
+            paragraph.innerHTML = "<p>I'm not refuting the original post here nor am I here to present a reason why there is a similarity ( the replies in that link do a good job of it already). I'm simply here to share what I found because like most of you, I'm very passionate about our cultures and want to contribute to us better understanding them.A quick look into de Noceda's Vocabulario also shows Paro-paro as the word for butterfly, and a variant of it is Aliparo. I think Cheestorian mentioned something about how our ancestors had some form of folk taxonomy with words that contain Ali-. So yeah, paru-paro might not have come from Nahuatl and may actually really be Austronesian.</p>";
+        }
+        function addParag() {
+            newParagraph.innerHTML = "<p>I'm not refuting the original post here nor am I here to present a reason why there is a similarity ( the replies in that link do a good job of it already). I'm simply here to share what I found because like most of you, I'm very passionate about our cultures and want to contribute to us better understanding them.A quick look into de Noceda's Vocabulario also shows Paro-paro as the word for butterfly, and a variant of it is Aliparo. I think Cheestorian mentioned something about how our ancestors had some form of folk taxonomy with words that contain Ali-. So yeah, paru-paro might not have come from Nahuatl and may actually really be Austronesian.</p>";
+            div.appendChild(newParagraph);
+        }
+
+        function ClickFunction() {
+            hi.textContent = '';
+        }
+
+        function initialPage() {
+            hi.textContent = 'hello ';
+        }
+
+        // for btn = arrow function d nmn reusable un function
+        btn1.addEventListener('click', () => {
+            hi.textContent = 'sherwin castillo';
+            // alert('you clicked me! the heading will change to ' + hi.textContent);
+
+
+        });
+
+        btn2.addEventListener('click', ClickFunction);
+        btn3.addEventListener('click', deleteParag);
+        addbtn.addEventListener('click', addParag);
+
+
+    </script>
+</body>
+
+</html>

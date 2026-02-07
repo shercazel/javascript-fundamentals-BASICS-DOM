@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="object.js"></script>
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: #dc7e27;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            border-radius: 10%;
+            box-shadow: -5px 5px 0rem 0rem rgba(0, 0, 0, 0.139);
+        }
+
+        .FirsT {
+            border-radius: 50px;
+            height: 80%;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .Second {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+
+        .YellowColor {
+            background-color: #ffff03;
+            color: rgb(169, 138, 138);
+            height: 100px;
+            width: 150px;
+            font-size: 1rem;
+            border: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .YellowColor:hover {
+            background-color: #eaeaea;
+            color: black;
+            font-weight: bolder;
+        }
+
+        .OrangeColor {
+            background-color: #ff9900;
+            color: rgb(0, 0, 0);
+            height: 100px;
+            width: 150px;
+            font-size: 1rem;
+            border: none;
+            transition: all 0.3s ease-in-out;
+
+
+        }
+
+        .OrangeColor:hover {
+            background-color: #ffffff;
+            font-weight: bolder;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="FirsT">
+        <h1>Adults Plain Cotton T-Shirt</h1>
+        <h1>Price $7.99 </h1>
+        <div class="Second">
+            <button class="YellowColor" onclick="alert('Add To Cart!')">Add to Cart</button>
+            <button class="OrangeColor" onclick="alert('Buy the product')">
+                Buy now!
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>

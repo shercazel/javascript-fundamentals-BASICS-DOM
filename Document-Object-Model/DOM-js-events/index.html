@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="Container"></div>
+    <!-- <button type="button" onclick="displaymsg()">Click here</button> -->
+    <button id="button" type="button">Click here</button>
+
+
+
+
+    <script>
+
+        // let buttoneventhandler = document.getElementById('button');
+        // buttoneventhandler.onclick = function displaymsg() {
+        //     console.log('button click');
+
+        // } 
+        function displaymsg() {
+            console.log('hahahh');
+        }
+        let btn = document.getElementById('button');
+        btn.addEventListener('click', displaymsg);
+        btn.removeEventListener('click', displaymsg)
+
+
+        // let buttoneventhandler = document.getElementById('button');
+        // buttoneventhandler.addEventListener('click', function(){
+        //     console.log('heloo world')
+        // })
+    </script>
+</body>
+
+</html>

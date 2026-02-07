@@ -1,0 +1,28 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+div {
+    background-color: aqua;
+    z-index: 2;
+}
+
+header {
+    background-color: bisque;
+    height: 10vh;
+    width: 100vw;
+    z-index: 0;
+    font-size: 4rem;
+    text-align: center;
+}
+
+#sheshe {
+    color: red;
+    font-size: 4rem;
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+}

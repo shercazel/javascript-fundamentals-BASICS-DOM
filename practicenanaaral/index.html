@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="Stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <footer>
+        <ul>
+            <li>MAIN</li>
+            <li>SHERWIN</li>
+            <li>CLASS</li>
+            <li>BODY</li>
+        </ul>
+        <div>
+                <p id="hello">hello</p>
+                <p id="bye">bye</p>
+            </div>
+    </footer>
+    <script>
+
+        const body = document.body;
+        body.id = "main-body-container";
+        let section = document.createElement("section");
+        section.className = "section";
+        body.append(section);
+
+        let Headers = document.getElementsByTagName("header")[0];
+        Headers.id = "main-header";
+        let divNavBar = document.createElement('div');
+        divNavBar.id = "nav-container";
+        Headers.append(divNavBar);
+
+        let ul = document.querySelector("ul");
+        let addlist = document.createElement("li");
+        addlist.textContent = "MICAH";
+        
+        ul.append(addlist);
+
+        const div =  document.getElementsByTagName('div')[1];
+        const hello = document.querySelector('#hello');
+        const bye = document.querySelector('#bye');
+
+        bye.remove();
+        div.append(bye);
+    
+
+
+
+
+    </script>
+
+</body>
+
+</html> 

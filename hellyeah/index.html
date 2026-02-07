@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="Stylesheet">
+    <title>Document</title>
+</head>
+
+
+<ul id="Menu">Menu
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+</ul>
+<div>
+    <!-- <p>Micah</p> -->
+    <div id="container">
+        <p>Fullante</p>
+        <p>Fullante</p>
+        <p>Fullante</p>
+    </div>
+</div>
+
+<!-- type id and placeholder is the attribute name -->
+<!-- text username username is the attribute value -->
+<input type="text" id="username" placeholder="username">
+
+<body>
+
+    <script>
+        // get the element
+        let addUl = document.getElementById("Menu");
+        // modify
+        let list = document.createElement("li");
+        list.innerHTML = "Specialty";
+        // append
+        addUl.appendChild(list);
+
+
+
+        let addHeader = document.createElement('header')
+        addHeader.innerHTML = "<p>Sherwin Castillo  </p>";
+        addHeader.className = "Main-header";
+        document.body.appendChild(addHeader);
+        console.log(addHeader);
+
+        let addDiv = document.createElement('div');
+        addDiv.innerHTML = "<p> Welcome to the philippines</p>";
+        addDiv.id = "sheshe";
+        document.body.appendChild(addDiv);
+
+        console.log(addDiv);
+
+
+        let container = document.getElementById("container");
+        let paragraph = document.createElement("p");
+        paragraph.innerHTML = "sherwin";
+        container.prepend(paragraph);
+        console.log(container.textContent);
+
+        // mag add ng li gamit and insertAdjacent
+        container.insertAdjacentHTML("beforeend", "<li> Castillo ay pogi</li>");
+
+        // clone node
+
+        let newnode = container.cloneNode(true);
+        console.log(newnode);
+
+        //remove
+        let removechild = container.removeChild(container.lastElementChild)
+        console.log(removechild);
+
+        // attribute method
+
+        let input = document.getElementById("username");
+        // to get the attribute is the text  id placeholder
+        console.log(input.getAttribute("placeholder"));
+
+        //set a new attribute
+        input.setAttribute("class", "login-username");
+        console.log(input);
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

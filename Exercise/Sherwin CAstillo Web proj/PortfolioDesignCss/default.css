@@ -1,0 +1,240 @@
+@import url(navigation.css);
+@import url(heroSection.css);
+@import url(aboutSection.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #001007;
+    --secondary-color: #06ed38;
+    --tertiary-color: white;
+    --font-size: 17px;
+    --font-family: "Montserrat", sans-serif;
+    --second-bg-color: #232D2F;
+
+}
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #001007 70%, #00791a);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--font-size);
+    color: white;
+}
+
+nav {
+    background-color: transparent;
+    grid-area: nav;
+    display: flex;
+    gap: 0.5rem;
+    height: 15vh;
+    width: 100%;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+    font-size: var(--font-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+
+
+    li {
+        list-style: none;
+
+        a {
+            color: var(--tertiary-color);
+            text-decoration: none;
+            font-family: var(--font-family);
+            width: 100%;
+
+        }
+    }
+}
+
+section {
+    width: 100vw;
+}
+
+button {
+    width: 2em;
+    height: 3rem;
+}
+
+p {
+    font-family: var(--font-family);
+    color: var(--primary-color);
+    font-size: var(--font-size);
+    font-weight: 500;
+}
+
+svg {
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+
+#hero-section {
+    grid-area: heroSection;
+    background: transparent;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+
+#about-section {
+    grid-area: aboutSection;
+    background-color: transparent;
+    height: 90vh;
+}
+
+#projects-section {
+    grid-area: serviceSection;
+    background-color: rgb(123, 123, 2);
+    height: 90vh;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(10, 10, 0);
+    height: 20vh;
+}
+
+.Main-Container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%;
+
+    grid-template-areas:
+        'nav nav nav'
+        'heroSection heroSection heroSection'
+        'aboutSection aboutSection aboutSection'
+        'serviceSection serviceSection serviceSection'
+        'footer footer footer'
+    ;
+
+}
+
+@media (max-width: 991px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        gap: 0.2rem;
+    }
+
+    .nav-container {
+        width: 100vw;
+    }
+
+    .nav-box {
+        height: 100%;
+        width: 40%;
+    }
+
+    .nav-box:nth-child(1) {
+        width: 10%;
+    }
+
+    .nav-box:nth-child(2) {
+        width: 50%;
+    }
+
+    .nav-box:nth-child(3) {
+        margin-right: 5%;
+    }
+
+    .nav-box-contacks {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 3%;
+
+        .nav-box-contacks-links {
+            width: 2rem;
+            height: 40%;
+            border-radius: 50%;
+            border: none;
+            background-color: transparent;
+        }
+    }
+
+    /* hero section */
+
+    #hero-section {
+        padding: 0.2em;
+        position: relative;
+    }
+
+    .hero-section-container {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .hero-content {
+        margin-left: 4rem;
+        font-size: 2rem;
+        height: 70%;
+        min-width: 350px;
+        max-height: 100%;
+        gap: 0.25rem;
+    }
+
+    .hero-paragraph-one {
+        position: relative;
+        top: 2%;
+        width: 50%;
+        font-size: 15px;
+        font-family: var(--font-family);
+        color: var(--tertiary-color);
+    }
+
+    .hero-paragraph-two {
+        font-size: 15px;
+        font-family: var(--font-family);
+        color: var(--tertiary-color);
+        z-index: 2;
+    }
+
+    .hero-span {
+        font-size: 4rem;
+        position: relative;
+        bottom: 10%;
+        color: var(--secondary-color);
+
+    }
+
+    .hero-section-logo {
+        position: relative;
+        top: 120px;
+        right: 60px;
+        height: 440px;
+    }
+
+
+
+}

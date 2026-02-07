@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const body = document.querySelector('body');
+        const div = document.createElement('div');
+        const inputBox = document.createElement('input');
+        const button = document.createElement('button');
+        const output = document.createElement('p');
+        const outputContainer1 = document.createElement('div');
+        const outputContainer2 = document.createElement('div');
+        const count = 0;
+
+
+
+
+        body.style.height = "100vh";
+        body.style.width = "100vw";
+        body.style.background = 'beige';
+        body.style.display = 'flex';
+        body.style.justifyContent = 'center';
+        body.style.alignItems = 'center';
+
+
+        div.style.height = "80%";
+        div.style.width = "60%";
+        div.style.background = 'white';
+        div.style.display = 'flex';
+        div.style.justifyContent = 'center';
+        div.style.flexDirection = 'column';
+        div.style.alignItems = 'center';
+        div.style.padding = '50px';
+        div.style.gap = '10px';
+        div.style.position = 'relative';
+        div.style.borderRadius = '20px';
+
+
+        // inputBox
+        inputBox.style.height = '50px';
+        inputBox.style.width = '500px';
+        inputBox.style.borderRadius = '10px';
+        inputBox.style.border = '2px solid green';
+        inputBox.style.paddingLeft = '10px';
+        inputBox.style.color = 'blue';
+        inputBox.style.fontWeight = '700';
+        inputBox.classList.add('inputName');
+
+        // button
+        button.style.height = '50px';
+        button.style.width = '140px'
+        button.innerText = 'submit';
+        button.style.border = '2px solid green';
+        button.style.borderRadius = '10px';
+
+        output.style.color = 'blue';
+        output.style.fontSize = '32px';
+        output.style.fontFamily = 'verdana';
+        output.style.fontWeight = 'bold';
+
+        outputContainer1.style.height = '100px';
+        outputContainer1.style.display = 'flex';
+        outputContainer1.style.alignItems = 'center';
+        outputContainer1.style.justifyContent = 'center';
+        outputContainer1.style.gap = '10px';
+        outputContainer1.style.width = '80%';
+        outputContainer1.style.border = 'none';
+
+        outputContainer2.style.height = '300px';
+        outputContainer2.style.width = '80%';
+        outputContainer2.style.border = '1px solid green';
+        outputContainer2.style.boxShadow = '-10px 10px  0px green'
+        outputContainer2.style.borderRadius = '10px';
+        outputContainer2.style.position = 'relative';
+        outputContainer2.style.display = 'flex';
+        outputContainer2.style.alignItems = 'center';
+        outputContainer2.style.justifyContent = 'center';
+
+
+
+
+
+
+        body.append(div);
+        div.append(outputContainer1, outputContainer2);
+        outputContainer1.append(inputBox, button);
+        outputContainer2.append(output);
+
+
+        button.addEventListener("click", () => {
+            const v = inputBox.value;
+            output.innerText = v;
+            inputBox.value = '';
+        });
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
